@@ -16,7 +16,7 @@ def server():
  while 1:
    s.listen(1)
    conn, addr = s.accept()
-  # print 'Connected by', addr[0]
+   # print 'Connected by', addr[0]
    data = conn.recv(1024)
    if(data):
     print data
@@ -36,6 +36,7 @@ def client():
     s.connect((nodes[i], 12233))
     s.sendall("Computer "+endip+": "+message)
    except:
+    print nodes[i].split(".")[2]+"."+nodes[i].split(".")[3]+" has gone offline"
     nodes.remove(nodes[i])
    s.close()
 
