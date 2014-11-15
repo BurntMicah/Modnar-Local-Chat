@@ -75,4 +75,4 @@ thread.start_new_thread(handclient, (False,))
 thread.start_new_thread(handserver, ())
 thread.start_new_thread(server, ())
 #while 1:
-client()-
+client()
