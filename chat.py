@@ -36,6 +36,8 @@ def client():#Sends message to all ip addresses in nodes[]
    if command=="block":
     blockednodes.append(begip+'.'+message.split(" ")[1])
     print "Successfully blocked the A-hole!"
+   if command=="help":
+    print "Commands: Type the following\n/help - Displays this message\n/block - [computer #] - example '/block 100.10'
   else:
    time.sleep(0.1)
    for i in range(0, len(nodes)):
