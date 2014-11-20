@@ -35,7 +35,7 @@ def client():#Sends message to all ip addresses in nodes[]
    command = message.split(" ")[0][1:]
    if command=="block":
     blockednodes.append(begip+'.'+message.split(" ")[1])
-    Else:
+  else:
    time.sleep(0.1)
    for i in range(0, len(nodes)):
     s = socket.socket()         # Create a socket object
@@ -48,7 +48,7 @@ def client():#Sends message to all ip addresses in nodes[]
      try:
       print nodes[i].split(".")[2]+"."+nodes[i].split(".")[3]+" has gone offline"
       nodes.remove(nodes[i])
-    s.close()
+     s.close()
 
 
 def handserver():#Accepts incoming handshakes; stores ipaddress and responds with ipaddress
