@@ -33,7 +33,7 @@ def client():#Sends message to all ip addresses in nodes[]
   message = raw_input()
   if message[0]=='/':
    command = message.split(" ")[0][1:]
-   if command=="block:
+   if command=="block":
     blockednodes.append(begip+'.'+message.split(" ")[1])
     Else:
    time.sleep(0.1)
