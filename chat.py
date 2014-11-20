@@ -48,7 +48,9 @@ def client():#Sends message to all ip addresses in nodes[]
      try:
       print nodes[i].split(".")[2]+"."+nodes[i].split(".")[3]+" has gone offline"
       nodes.remove(nodes[i])
-     s.close()
+     except:
+      print "Error"
+    s.close()
 
 
 def handserver():#Accepts incoming handshakes; stores ipaddress and responds with ipaddress
