@@ -22,7 +22,7 @@ def server():#Looks for inoming TCP connections and prints message along with co
    conn, addr = s.accept()
    data = conn.recv(1024)
    if not(addr[0] in blockednodes):
-    print "\nComputer "+addr[0].split(".")[2]+"."+addr[3].split(".")[3]+": "+data
+    print "\nComputer "+addr[0].split(".")[2]+"."+addr[0].split(".")[3]+": "+data
    conn.close()
 
 def client():#Sends message to all ip addresses in nodes[]
