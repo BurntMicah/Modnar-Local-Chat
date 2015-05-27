@@ -31,7 +31,9 @@ def client():#Sends message to all ip addresses in nodes[]
  endip=localip.split(".")[2]+"."+localip.split(".")[3]
  while 1:
   message = raw_input()
-  if message[0]=='/':
+  if message == '':
+   print ""
+  elif message[0]=='/':
    command = message.split(" ")[0][1:]
    if command=="block":
     blockednodes.append(begip+'.'+message.split(" ")[1])
